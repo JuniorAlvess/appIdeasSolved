@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary to Decimal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/514389fa6b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <fieldset>
+            <legend>Conversor de números binários para decimal</legend>
+            
+            <div class="group">
+                <input type="number" name="num" min="-1" max="1" required placeholder="Digite apenas números binários">
+
+                <div class="warning">
+                    <p id="warningMessege">Digite no máximo 8 números.</p>
+                    <i id="iconWarning" class="fas fa-exclamation-circle" title="Digite no máximo 8 números"></i>
+                </div>
+                <button type="submit">Convert</button>
+            </div>
+                <p id="output"></p>
+        </fieldset>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

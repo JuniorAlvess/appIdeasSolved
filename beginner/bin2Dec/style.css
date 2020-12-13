@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+
+    background-color: #0f3057;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 2rem auto;
+  }  
+  
+  fieldset {
+    color: #fff;
+    /* background-color: #070d59; */
+    width: 30vw;
+
+    margin-top: 10rem;    
+    padding: 1rem;
+    
+    border: 2px solid #00587a;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0.5em #000;
+  }
+  
+  fieldset legend {
+    background-color: #00587a;
+    text-align: center;
+    color: #fff;
+
+    border-radius: 1rem;
+    
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .group {
+    padding: 0.5rem;
+  
+    display: flex;
+    justify-content: center;
+  }
+  
+  .group input, button {
+    height: 3rem;
+    padding: 1rem;
+    
+    border: 1px solid;
+    outline: none;
+  }
+  
+  .group input {
+    width: 15rem;
+
+    border-radius: 6px 0 0 6px;
+    border-color: #008891;
+    border-right-color: #fff;
+  }
+
+  .warning {
+    background: #fff;
+    color: #ccc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 0.9rem;
+    margin-right: 10px;
+
+    border: 1px solid #008891;
+    border-radius: 0 6px 6px 0;
+    border-left: none;
+  }
+
+  .warning p {
+    position: absolute;
+    width: 13rem;
+    background: #f00;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+
+    padding: 1rem;
+    margin-top: 2.5rem;
+
+    opacity: 0%;
+    transition: .3s;
+  }
+
+  .warning p:after {
+    content: "";
+    position: relative;
+  
+    bottom: 3.2rem;
+    right: 6rem;
+  
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #f00;
+  }
+  
+  button {
+    background: #008891;
+    color: #fff;
+    
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    transition: .3s;
+  }
+  button:hover {
+    filter: brightness(0.9);
+  }
+  
+  p {
+    max-width: 19rem;
+
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    
+    margin: 0.2rem 0.5rem;
+    padding: 1rem 0.1rem;
+
+    border-radius: 0.6rem;
+  }
