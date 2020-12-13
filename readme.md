@@ -1,2 +1,2 @@
 # About
-Criei este repositório para desenvolver melhor as minhas habilidades com JavaScript, HTML e CSS. Os projetos que aqui serão postados, serão dos níveis básico, intermediário e avançado. Usarei como base o repositório [app-ideas](https://github.com/florinpop17/app-ideas).
+Criei este repositório para desenvolver melhor as minhas habilidades com <img src="https://img.shields.io/badge/-JavaScript-yellow">, HTML e CSS. Os projetos que aqui serão postados, serão dos níveis básico, intermediário e avançado. Usarei como base o repositório [app-ideas](https://github.com/florinpop17/app-ideas).
