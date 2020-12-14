@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Previewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/514389fa6b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+            <div class="box">
+                <div class="profileCard">
+                    <i class="fas fa-user"></i>
+                    <p>
+                        Olá, me chamo John Carter, tenho 25 anos e moro em São Paulo - SP.
+                        Por favor, estilize o border-radius deste meu card usando a unidade de medida px para o visual
+                        ficar um pouco mais agradavel.
+                    </p>
+
+                </div>
+            </div>
+            <div class="box-manage">
+                <p>
+                    Caso tenha duvidas de como aplicar a border-radius em alguma box que esteja criando, o
+                    este site é ideal para você. Alem de modificar o border radius dessa box, também será possível
+                    inserir cor no
+                    background e na fonte, so let's do it!
+                </p>
+
+                <p>Use apenas valores entre 0 a 100.</p>
+
+                <form>
+                    <div class="input-group">
+                        <label for="top"> Top: </label>
+                        <input type="number" name="top" id="">
+                        <label for="right"> Right: </label>
+                        <input type="number" name="right" id="">
+                        <label for="left"> Left: </label>
+                        <input type="number" name="left" id="">
+                        <label for="bottom"> Bottom: </label>
+                        <input type="number" name="bottom" id="">
+                    </div>
+
+                    <div class="input-color">
+                        <label for="borderColor"> Cor da borda: </label>
+                        <input type="color" name="borderColor" id="">
+                    </div>
+                    <div class="input-color">
+                        <label for="backgroundColor"> Cor de fundo: </label>
+                        <input type="color" name="backgroundColor" id="">
+                    </div>
+
+                    <button type="submit">Aplicar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
