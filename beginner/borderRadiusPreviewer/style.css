@@ -15,14 +15,17 @@ main {
 .content {
     background: #ebecf1;
 
-    height: 70vh;
-    width: 70vw;
+    /* height: clamp(25rem ,70vh, 35rem); */
+    height: 30rem;
+    width: clamp(35rem, 55rem, 70rem);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     padding: 0.5rem;
+
+    margin: 0 1rem;
 
     border-radius: 0.6rem;
     box-shadow: 0 0 0.3em #000;
@@ -31,22 +34,66 @@ main {
 .box {
     background: #fff;
 
+    /* box-sizing: content-box; */
     height: 100%;
     width: 60%;
-
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
     border-radius: 1rem;
     box-shadow: inset 0 0 0.3em #333;
 }
 
 .box .profileCard {
     border: 1px solid;
-    width: 55%;
-    min-width: 10rem;
-
+    /* height: 23rem; */
+    height: clamp(21rem, 90%, 28rem);
+    width: clamp(5rem, 55%, 45rem);
+    /* margin: auto 0.5rem; */
+    /* min-width: 5rem; */
+    /* display: none; */
+    /* visibility: visible; */
     text-align: center;
     padding: 1rem;
 
     margin: 2rem auto;
+
+    overflow: hidden;
+}
+
+.box .view-code {
+    /* visibility: hidden; */
+    /* display: none; */
+    background-color: #222831;
+    /* border: 1px solid blue; */
+    border-radius: 1rem 0 0 1rem;
+    width: 0%;
+    height: 90%;
+    margin-left: 1rem;
+    /* text-align: center/; */
+    overflow: hidden;
+    transition: 1s;
+}
+
+.box .view-code code {
+    display: block;
+    padding: 0.6rem;
+    /* border: 1px solid #fff; */
+    margin: 0.2rem auto;
+    /* width: 65%; */
+    /* text-align: center; */
+    /* border: 1px solid #fff; */
+    color: lightblue;
+    /* font-size: 0.9vw; */
+    font-size: clamp(0.8rem, 0.8vw, 1.3rem);
+    /* font-weight: 400; */
+    letter-spacing: 0.1rem;
+    /* font-family: 'Poppins', sans-serif;*/
+}
+
+.box .view-code code b {
+    color: #f2f2f2;
+    /* font-weight: ; */
 }
 
 .box .profileCard i {
@@ -64,7 +111,7 @@ main {
 .box .profileCard p {
     /* border: 1px solid #000; */
     /* font-size: 1.5vw; */
-    font-size: clamp( 0.8rem, 1.4vw, 1.3rem);
+    font-size: clamp(0.7rem, 1.3vw, 1.3rem);
     font-weight: 400;
     letter-spacing: 0.1rem;
     font-family: 'Poppins', sans-serif;
@@ -82,7 +129,7 @@ main {
 .box-manage p {
     color: #204051;
 
-    font-size: clamp( 0.8rem, 1.1vw, 1.3rem);
+    font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 500;
     letter-spacing: 0.1rem;
     font-family: 'Roboto', sans-serif;
@@ -90,29 +137,41 @@ main {
     margin-bottom: 1rem;
 }
 
-.box-manage form {
-    /* border: 1px solid; */
-    padding: 0.1rem;
-}
-
-.box-manage form label {
+.box-manage label {
     color: #204051;
 
-    font-size: clamp( 0.8rem, 1.1vw, 1.3rem);
+    font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 500;
     letter-spacing: 0.1rem;
     font-family: 'Roboto', sans-serif;
 }
 
-.box-manage form .input-group {
+.box-manage .input-group {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+    /* border: 1px solid; */
+
+    margin-bottom: 0.3rem;
+    /* height: clamp(11rem, 8rem , 15rem); */
+    /* width: 20.9rem; */
+    /* width: clamp(11rem, 22rem, 24rem); */
+}
+
+.box-manage .input-group .input-wrapper {
+    /* border: 1px solid blue; */
+    width: clamp(4rem, 9.5rem, 11rem);
+    /* width: clamp(6rem,10.5rem); */
+    padding: auto 0.3rem;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.box-manage form .input-group input {
-    width: 6rem;
+.box-manage .input-group input {
+    width: clamp(3rem, 5rem, 7rem);
 
     padding: 0.3rem;
     margin: 0.5rem;
@@ -122,15 +181,15 @@ main {
     outline-color: #336d88;
 }
 
-.box-manage form .input-color {
+/* .box-manage .input-color {
     display: flex;
     align-items: center;
     gap: 1rem;
 
     margin: 0.5rem 0;
-}
+} */
 
-.box-manage form input[type="color"] {
+.box-manage input[type="color"] {
     width: 2.5rem;
     height: 2rem;
 
@@ -141,16 +200,25 @@ main {
     cursor: pointer;
 }
 
-.box-manage form button {
+.box-manage .button-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* height: 3rem; */
+    /* border: 1px solid; */
+    /* padding: 1rem; */
+}
+
+button {
     display: block;
     background: #204051;
     color: #fff;
-    width: 50%;
+    /* width: 50%; */
 
-    padding: 0.5rem;
-    margin: 2rem auto 1rem;
+    padding: 0.7rem;
+    /* margin: 2rem auto 1rem; */
 
-    font-size: clamp( 0.8rem, 1.1vw, 1.3rem);
+    font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 500;
     letter-spacing: 0.1rem;
     font-family: 'Roboto', sans-serif;
@@ -160,11 +228,166 @@ main {
     cursor: pointer;
     outline: none;
     transition: .3s;
+    margin-bottom: 0.5rem;
 }
 
-.box-manage form button:hover {
+.box-manage button[type="submit"] {
+    width: 50%;
+    padding: 0.7rem;
+}
+
+.box-manage button {
+    width: 25%;
+    padding: 0.3rem;
+    font-size: clamp(0.8rem, 1vw, 1.3rem);
+    font-weight: 500;
+    /* letter-spacing: 0.1rem; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.view-code button {
+    margin: 1rem auto;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.view-code button i {
+    color: lightblue;
+    font-size: 1.5rem;
+}
+
+button:hover {
     filter: brightness(0.8);
 }
-.box-manage form button:active {
+
+button:active {
     transform: scale(.9);
+}
+
+@media (max-width: 750px) {
+    .box-manage p {
+        display: none;
+    }
+
+    .box-manage .input-group {
+        margin-top: 2rem;
+    }
+
+    .box-manage .button-group {
+        margin-top: 3rem;
+        /* border: 1px solid; */
+    }
+
+    .box-manage button {
+        width: 5rem;
+        margin-left: 0.3rem;
+    }
+}
+
+@media (max-width: 590px) {
+    .content {
+        height: 98vh;
+        /*width: clamp(35rem, 55rem, 70rem); */
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        /* padding-left: 1rem; */
+        /* margin: 1rem; */
+    }
+
+    .box {
+        border: 1px solid;
+        height: 70%;
+        /* height: clamp(17rem, 90%, 28rem); */
+        /* width: clamp(5rem, 55%, 45rem); */
+        /* margin: auto 0.5rem; */
+        width: 100%;
+        /* display: none; */
+        /* visibility: visible; */
+        text-align: center;
+        padding: 1rem;
+
+        margin: 2rem auto;
+
+        overflow: hidden;
+    }
+
+    .box-manage {
+        height: 30%;
+        width: 100%;
+        padding: 0.5rem 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* border: 1px solid; */
+        /* background: yellow; */
+    }
+
+    .box-manage .input-group {
+        display: flex;
+        /* flex-wrap: nowrap; */
+        margin: 0;
+        /* align-items: center; */
+        gap: 5px;
+        /* justify-content: space-between; */
+        /* border: 1px solid; */
+        /* height: clamp(11rem, 8rem , 15rem); */
+        /* width: 30%; */
+        /* width: clamp(11rem, 22rem, 24rem); */
+    }
+
+    .box-manage .input-group .input-wrapper {
+        height: 2rem;
+    }
+
+    .box-manage .input-group input {
+        max-width: 3rem;
+
+        padding: 0.3rem;
+        margin: 0.5rem;
+
+        border-radius: 0.3rem;
+        border: 1px solid #336d88;
+        outline-color: #336d88;
+    }
+
+    .box-manage input[type="color"] {
+        width: 3rem;
+        height: 2rem;
+    }
+
+    .box-manage .input-color {
+        display: flex;
+        /* height: 8rem; */
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        /* gap: 1rem; */
+        width: 40%;
+        /* border: 1px solid; */
+        margin: 0;
+        padding: 0;
+    }
+
+    .box-manage .button-group {
+        /* display: block; */
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        /* height: 3rem; */
+        /* border: 1px solid; */
+        padding: 0.8rem;
+        margin-top: 0;
+
+    }
+
+    .box-manage button[type="submit"] {
+        width: 100%;
+    }
+
+    .box-manage button {
+        width: 100%;
+        padding: 0.7rem;
+    }
 }

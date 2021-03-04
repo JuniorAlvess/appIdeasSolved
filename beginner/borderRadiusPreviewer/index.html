@@ -16,14 +16,65 @@
     <main>
         <div class="content">
             <div class="box">
-                <div class="profileCard">
+                <div id="card" class="profileCard">
                     <i class="fas fa-user"></i>
                     <p>
                         Olá, me chamo John Carter, tenho 25 anos e moro em São Paulo - SP.
                         Por favor, estilize o border-radius deste meu card usando a unidade de medida px para o visual
                         ficar um pouco mais agradavel.
                     </p>
+                </div>
 
+                <div id="viewCode" class="view-code">
+
+                    <!-- <code>
+                            <span>.box .profileCard{</span>
+                                <span>border: <b>1px solid</b>;</span>
+                                <span>width: <b>55%</b>;</span>
+                                <span>min-width: <b>10rem</b>;</span>
+                                <span>display: <b>none</b>;</span>
+                                <span>text-align: <b>center</b>;</span>
+                                <span>padding: <b>1rem</b>;</span>
+                                <span>margin: <b>2rem auto</b>;</span>
+                                <span>overflow: <b>hidden</b>;</span>
+                            <span>}</span>
+                        </code> -->
+
+                    <code>
+                        <!-- .box .profileCard{
+                        <br>
+                        width: <b>55%</b>;
+                        <br>
+                        min-width: <b>10rem</b>;
+                        <br>
+                        display: <b>none</b>;
+                        <br>
+                        text-align:<b>center</b>;
+                        <br>
+                        padding: <b>1rem</b>;
+                        <br>
+                        margin: <b>2rem auto</b>;
+                        <br>
+                        overflow: <b>hidden</b>;
+                        <br> -->
+                        background-color: <b id="backColor"></b>;
+                        <br>
+                        border-color: <b id="bColor"></b>;
+                        <br>
+                        border: <b>1px solid</b>;
+                        <br>
+                        border-top-left-radius: <b id="topLeft"></b>;
+                        <br>
+                        border-top-right-radius: <b id="topRight"></b>;
+                        <br>
+                        border-bottom-left-radius: <b id="bottomLeft"></b>;
+                        <br>
+                        border-bottom-right-radius: <b id="bottomRight"></b>;
+                        <br>
+                        }
+                    </code>
+
+                    <button onclick="copyCode()">Copy border <i class="fas fa-clipboard"></i></button>
                 </div>
             </div>
             <div class="box-manage">
@@ -34,34 +85,58 @@
                     background e na fonte, so let's do it!
                 </p>
 
-                <p>Use apenas valores entre 0 a 100.</p>
-
-                <form>
-                    <div class="input-group">
+                <!-- <p>Use apenas valores entre 0 a 100.</p> -->
+                <div class="input-group">
+                    <div class="input-wrapper">
                         <label for="top"> Top: </label>
-                        <input type="number" name="top" id="">
-                        <label for="right"> Right: </label>
-                        <input type="number" name="right" id="">
-                        <label for="left"> Left: </label>
-                        <input type="number" name="left" id="">
-                        <label for="bottom"> Bottom: </label>
-                        <input type="number" name="bottom" id="">
+                        <input id="borderTop" type="range" name="top" min="0" max="100" step="1">
+                        
                     </div>
 
+                    <div class="input-wrapper">
+                        <label for="right"> Right: </label>
+                        <input id="borderRight" type="range" min="0" max="50" step="1" value="0" name="right">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="left"> Left: </label>
+                        <input id="borderLeft" type="range" name="left" min="0" max="50" step="1" value="0">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="bottom"> Bottom: </label>
+                        <input id="borderBottom" type="range" name="bottom" min="0" max="50" step="1" value="0">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="borderColor"> Cor da borda: </label>
+                        <input id="borderColor" type="color" name="borderColor">
+                    </div>
+                    
+                    <div class="input-wrapper">
+                        <label for="backgroundColor"> Cor de fundo: </label>
+                        <input id="backgroundColor" type="color" name="backgroundColor" value="#ffffff">
+                    </div>
+                </div>
+<!-- 
+                <div class="group-input-colors">
                     <div class="input-color">
                         <label for="borderColor"> Cor da borda: </label>
-                        <input type="color" name="borderColor" id="">
+                        <input id="borderColor" type="color" name="borderColor" id="">
                     </div>
                     <div class="input-color">
                         <label for="backgroundColor"> Cor de fundo: </label>
-                        <input type="color" name="backgroundColor" id="">
+                        <input id="backgroundColor" type="color" name="backgroundColor" value="#ffffff">
                     </div>
+                </div> -->
 
-                    <button type="submit">Aplicar</button>
-                </form>
+                <div class="button-group">
+                    <button type="submit" onclick="handleBorder()">Aplicar</button>
+                    <button id="buttonViewCode" onclick="viewCode()">Ver Código</button>
+                </div>
             </div>
         </div>
+        <p id="testeteste"></p>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
