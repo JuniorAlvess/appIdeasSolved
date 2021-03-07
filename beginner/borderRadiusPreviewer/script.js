@@ -14,6 +14,7 @@ function handleBorder() {
     setValuesToCard.borderColor = getBorderColorValue
     setValuesToCard.backgroundColor = getBackgroundColor
 
+    // insert values in viewCode
     document.getElementById('backColor').innerHTML = getBackgroundColor
     document.getElementById('bColor').innerHTML = getBorderColorValue
     document.getElementById('topLeft').innerHTML = `${getBorderTopLeftValue}px`
@@ -38,4 +39,16 @@ function viewCode() {
         default:
             console.log(buttonViewCode.innerHTML)
     }
+}
+
+function copyCode() {
+    let copyText = document.getElementById('borderRight')
+
+    copyText.select();
+
+    // copyText.setSelectionRange(0, 99999)
+    copyText.
+    document.execCommand("copy");
+
+    alert("Copied the text: " + copyText.value)
 }
