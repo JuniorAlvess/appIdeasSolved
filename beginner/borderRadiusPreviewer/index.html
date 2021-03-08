@@ -51,31 +51,33 @@
             </div>
             <div class="box-manage">
                 <p>
-                    Caso tenha dúvidas de como aplicar a border-radius em alguma box que esteja criando, o
-                    este site é ideal para você. Além de modificar o border radius dessa box, também será possível
-                    inserir cor no
-                    background e na fonte, so let's do it!
+                    Caso tenha dúvidas de como estilizar a border-radius em alguma box que esteja criando,
+                    este site é ideal para você. Além de modificar a border-radius dessa box, também será possível
+                    inserir cor na borda e no background, so let's do it!
                 </p>
 
                 <div class="input-group">
                     <div class="input-text">
-                        <span>border-radius:</span>
+                        <span> border-radius: </span>
                         <div class="input-wrapper">
                             <label for="top">%</label>
-                            <input id="borderTop" type="text" name="top" value="0">
-
+                            <input id="borderTop" type="text" name="top" value="0" title="top-left"
+                                onkeypress="return sendValuesToCard('borderTopLeftRadius')">
                         </div>
                         <div class="input-wrapper">
                             <label for="right">%</label>
-                            <input id="borderRight" type="text" name="right" value="0">
+                            <input id="borderRight" type="text" name="right" value="0" title="top-right"
+                                onkeypress="return sendValuesToCard('borderTopRightRadius')">
                         </div>
                         <div class="input-wrapper">
                             <label for="left">%</label>
-                            <input id="borderLeft" type="text" name="left" value="0">
+                            <input id="borderLeft" type="text" name="left" value="0" title="bottom-left"
+                                onkeypress="return sendValuesToCard('borderBottomLeftRadius')">
                         </div>
                         <div class="input-wrapper">
                             <label for="bottom">%</label>
-                            <input id="borderBottom" type="text" name="bottom" value="0">
+                            <input id="borderBottom" type="text" name="bottom" value="0" title="bottom-right"
+                                onkeypress="return sendValuesToCard('borderBottomRightRadius')">
                         </div>
 
                         <span> ; </span>
@@ -86,7 +88,7 @@
                             <label for="borderColor"> Cor da borda: </label>
                             <input id="borderColor" type="color" name="borderColor">
                         </div>
-    
+
                         <div class="input-wrapper">
                             <label for="backgroundColor"> Cor de fundo: </label>
                             <input id="backgroundColor" type="color" name="backgroundColor" value="#ffffff">
