@@ -58,32 +58,39 @@
                 </p>
 
                 <div class="input-group">
-                    <div class="input-wrapper">
-                        <label for="top"> Top Left: </label>
-                        <input id="borderTop" type="range" name="top" value="0" min="0" max="100" step="1">
+                    <div class="input-text">
+                        <span>border-radius:</span>
+                        <div class="input-wrapper">
+                            <label for="top">%</label>
+                            <input id="borderTop" type="text" name="top" value="0">
 
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="right">Top Right: </label>
-                        <input id="borderRight" type="range" name="right" value="0" min="0" max="100" step="1">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="left"> Bottom Left: </label>
-                        <input id="borderLeft" type="range" name="left" value="0" min="0" max="100" step="1">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="bottom"> Bottom Right: </label>
-                        <input id="borderBottom" type="range" name="bottom" value="0" min="0" max="100" step="1">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="right">%</label>
+                            <input id="borderRight" type="text" name="right" value="0">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="left">%</label>
+                            <input id="borderLeft" type="text" name="left" value="0">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="bottom">%</label>
+                            <input id="borderBottom" type="text" name="bottom" value="0">
+                        </div>
+
+                        <span> ; </span>
                     </div>
 
-                    <div class="input-wrapper">
-                        <label for="borderColor"> Cor da borda: </label>
-                        <input id="borderColor" type="color" name="borderColor">
-                    </div>
-
-                    <div class="input-wrapper">
-                        <label for="backgroundColor"> Cor de fundo: </label>
-                        <input id="backgroundColor" type="color" name="backgroundColor" value="#ffffff">
+                    <div class="input-color">
+                        <div class="input-wrapper">
+                            <label for="borderColor"> Cor da borda: </label>
+                            <input id="borderColor" type="color" name="borderColor">
+                        </div>
+    
+                        <div class="input-wrapper">
+                            <label for="backgroundColor"> Cor de fundo: </label>
+                            <input id="backgroundColor" type="color" name="backgroundColor" value="#ffffff">
+                        </div>
                     </div>
                 </div>
 

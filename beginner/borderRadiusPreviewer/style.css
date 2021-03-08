@@ -4,7 +4,7 @@
 }
 
 main {
-    background-color: #f2f2f2;
+    background: #0f3057;
     height: 100vh;
 
     display: flex;
@@ -13,8 +13,8 @@ main {
 }
 
 .content {
-    background: #ebecf1;
-
+    /* background: #ebecf1; */
+    background: #00587a;
     /* height: clamp(25rem ,70vh, 35rem); */
     height: 30rem;
     width: clamp(35rem, 55rem, 70rem);
@@ -121,13 +121,10 @@ main {
     height: 100%;
     width: 40%;
     padding: 0.5rem 1rem;
-
-    /* border: 1px solid; */
-    /* background: yellow; */
 }
 
 .box-manage p {
-    color: #204051;
+    color: #ccc;
 
     font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 500;
@@ -137,8 +134,8 @@ main {
     margin-bottom: 1rem;
 }
 
-.box-manage label {
-    color: #204051;
+.box-manage label, span {
+    color: #f2f2f2;
 
     font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 500;
@@ -148,75 +145,54 @@ main {
 
 .box-manage .input-group {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
     gap: 5px;
-    justify-content: space-between;
+
     /* border: 1px solid; */
-
     margin-bottom: 0.3rem;
-    /* height: clamp(11rem, 8rem , 15rem); */
-    /* width: 20.9rem; */
-    /* width: clamp(11rem, 22rem, 24rem); */
 }
 
-.box-manage .input-group .input-wrapper {
-    /* border: 1px solid blue; */
-    width: clamp(4rem, 9.5rem, 11rem);
-    /* width: clamp(6rem,10.5rem); */
-    padding: auto 0.3rem;
+.box-manage .input-group .input-text {
+    background-color: #222831;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 0.5rem;
+
+    border-radius: 0.5rem;
+    /* border: 1px solid #f00; */
 }
 
-.box-manage .input-group input {
-    width: clamp(3rem, 5rem, 7rem);
+.box-manage .input-group .input-text .input-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* border: 1px solid #ff0; */
+}
 
+.box-manage .input-group .input-text .input-wrapper input {
+    background-color: #313844;
+    color: #f2f2f2;
+    width: 1.6rem;
+    text-align: center;
     padding: 0.3rem;
-    margin: 0.5rem;
-
-    border-radius: 0.3rem;
-    border: 1px solid #336d88;
-    outline-color: #336d88;
-}
-
-/* .box-manage .input-color {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    margin: 0.5rem 0;
-} */
-
-.box-manage input[type="color"] {
-    width: 2.5rem;
-    height: 2rem;
-
-    border-radius: 0.3rem;
-    border: 1px solid #336d88;
-    outline-color: #336d88;
-
-    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    outline: none;
 }
 
 .box-manage .button-group {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* height: 3rem; */
-    /* border: 1px solid; */
-    /* padding: 1rem; */
 }
 
 button {
     display: block;
-    background: #204051;
+    /* background: #204051; */
+    background: #008891;
     color: #fff;
-    /* width: 50%; */
 
     padding: 0.7rem;
-    /* margin: 2rem auto 1rem; */
 
     font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 500;
@@ -331,8 +307,9 @@ button:active {
         margin: 0;
         /* align-items: center; */
         gap: 5px;
+        /* background-color: #000; */
         /* justify-content: space-between; */
-        /* border: 1px solid; */
+        /* border: 1px solid ; */
         /* height: clamp(11rem, 8rem , 15rem); */
         /* width: 30%; */
         /* width: clamp(11rem, 22rem, 24rem); */
