@@ -20,33 +20,9 @@
                     <i class="fas fa-user"></i>
                     <p>
                         Olá, me chamo John Carter, tenho 25 anos e moro em São Paulo - SP.
-                        Por favor, estilize o border-radius deste meu card usando a unidade de medida px para o visual
-                        ficar um pouco mais agradavel.
+                        Por favor, estilize o border-radius deste meu card para tornar o visual
+                        um pouco mais agradavel.
                     </p>
-                </div>
-
-                <div id="viewCode" class="view-code">
-                    <code>
-                        {
-                        <br>
-                        background-color: <b id="backColor"></b>;
-                        <br>
-                        border-color: <b id="bColor"></b>;
-                        <br>
-                        border: <b>1px solid</b>;
-                        <br>
-                        border-top-left-radius: <b id="topLeft"></b>;
-                        <br>
-                        border-top-right-radius: <b id="topRight"></b>;
-                        <br>
-                        border-bottom-left-radius: <b id="bottomLeft"></b>;
-                        <br>
-                        border-bottom-right-radius: <b id="bottomRight"></b>;
-                        <br>
-                        }
-                    </code>
-
-                    <button onclick="copyCode()">Copy border <i class="fas fa-clipboard"></i></button>
                 </div>
             </div>
             <div class="box-manage">
@@ -82,23 +58,23 @@
 
                         <span> ; </span>
                     </div>
+                    <div id="viewCode" class="view-code">
+                        <code>
+                            {
+                            <br>
+                            border-top-left-radius: <b id="topLeft"></b>;
+                            <br>
+                            border-top-right-radius: <b id="topRight"></b>;
+                            <br>
+                            border-bottom-left-radius: <b id="bottomLeft"></b>;
+                            <br>
+                            border-bottom-right-radius: <b id="bottomRight"></b>;
+                            <br>
+                            }
+                        </code>
 
-                    <div class="input-color">
-                        <div class="input-wrapper">
-                            <label for="borderColor"> Cor da borda: </label>
-                            <input id="borderColor" type="color" name="borderColor">
-                        </div>
-
-                        <div class="input-wrapper">
-                            <label for="backgroundColor"> Cor de fundo: </label>
-                            <input id="backgroundColor" type="color" name="backgroundColor" value="#ffffff">
-                        </div>
+                        <button onclick="copyCode()">Copy border <i class="fas fa-clipboard"></i></button>
                     </div>
-                </div>
-
-                <div class="button-group">
-                    <button type="submit" onclick="handleBorder()">Aplicar</button>
-                    <button id="buttonViewCode" onclick="viewCode()">Ver Código</button>
                 </div>
             </div>
         </div>

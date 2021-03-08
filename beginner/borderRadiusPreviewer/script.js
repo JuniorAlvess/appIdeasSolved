@@ -3,30 +3,30 @@ function sendValuesToCard(condition) {
     const getBorderTopRightValue = document.getElementById('borderRight').value
     const getBorderBottomLeftValue = document.getElementById('borderLeft').value
     const getBorderBottomRightValue = document.getElementById('borderBottom').value
-    const getBorderColorValue = document.getElementById('borderColor').value
-    const getBackgroundColor = document.getElementById('backgroundColor').value
+    // const getBorderColorValue = document.getElementById('borderColor').value
+    // const getBackgroundColor = document.getElementById('backgroundColor').value
     const applyValuesInTheCard = document.getElementById('card').style
 
     // insert values in viewCode
-    document.getElementById('backColor').innerHTML = getBackgroundColor
-    document.getElementById('bColor').innerHTML = getBorderColorValue
-    document.getElementById('topLeft').innerHTML = `${getBorderTopLeftValue}px`
-    document.getElementById('topRight').innerHTML = `${getBorderTopRightValue}px`
-    document.getElementById('bottomLeft').innerHTML = `${getBorderBottomLeftValue}px`
-    document.getElementById('bottomRight').innerHTML = `${getBorderBottomRightValue}px`
+    // document.getElementById('backColor').innerHTML = getBackgroundColor
+    // document.getElementById('bColor').innerHTML = getBorderColorValue
+    document.getElementById('topLeft').innerHTML = `${getBorderTopLeftValue}%`
+    document.getElementById('topRight').innerHTML = `${getBorderTopRightValue}%`
+    document.getElementById('bottomLeft').innerHTML = `${getBorderBottomLeftValue}%`
+    document.getElementById('bottomRight').innerHTML = `${getBorderBottomRightValue}%`
 
     switch (condition) {
         case 'borderTopLeftRadius':
-            applyValuesInTheCard.borderTopLeftRadius = `${getBorderTopLeftValue}px`
+            applyValuesInTheCard.borderTopLeftRadius = `${getBorderTopLeftValue}%`
             break;
         case 'borderTopRightRadius':
-            applyValuesInTheCard.borderTopRightRadius = `${getBorderTopRightValue}px`
+            applyValuesInTheCard.borderTopRightRadius = `${getBorderTopRightValue}%`
             break;
         case 'borderBottomLeftRadius':
-            applyValuesInTheCard.borderBottomLeftRadius = `${getBorderBottomLeftValue}px`
+            applyValuesInTheCard.borderBottomLeftRadius = `${getBorderBottomLeftValue}%`
             break;
         case 'borderBottomRightRadius':
-            applyValuesInTheCard.borderBottomRightRadius = `${getBorderBottomRightValue}px`
+            applyValuesInTheCard.borderBottomRightRadius = `${getBorderBottomRightValue}%`
             break;
         default:
             console.log("it dosen't work")
@@ -56,9 +56,8 @@ function copyCode() {
 
     copyText.select();
 
-    // copyText.setSelectionRange(0, 99999)
-    copyText.
-        document.execCommand("copy");
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
 
     alert("Copied the text: " + copyText.value)
 }

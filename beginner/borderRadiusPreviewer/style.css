@@ -32,7 +32,7 @@ main {
 }
 
 .box {
-    background: #fff;
+    background: #e7e7de;
 
     /* box-sizing: content-box; */
     height: 100%;
@@ -45,19 +45,21 @@ main {
 }
 
 .box .profileCard {
-    border: 1px solid;
-    /* height: 23rem; */
+    background: #008891;
+    border: 1px solid #00587a;
+
     height: clamp(21rem, 90%, 28rem);
     width: clamp(5rem, 55%, 45rem);
-    /* margin: auto 0.5rem; */
-    /* min-width: 5rem; */
-    /* display: none; */
-    /* visibility: visible; */
+
     text-align: center;
+
     padding: 1rem;
-
     margin: 2rem auto;
-
+    border-radius: 30% 30% 30% 30% / 10% 40% 20% 15%;
+    /* border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%; */
     overflow: hidden;
 }
 
@@ -111,6 +113,7 @@ main {
 .box .profileCard p {
     /* border: 1px solid #000; */
     /* font-size: 1.5vw; */
+    color: #e7e7de;
     font-size: clamp(0.7rem, 1.3vw, 1.3rem);
     font-weight: 400;
     letter-spacing: 0.1rem;
@@ -134,7 +137,8 @@ main {
     margin-bottom: 1rem;
 }
 
-.box-manage label, span {
+.box-manage label,
+span {
     color: #f2f2f2;
 
     font-size: clamp(0.8rem, 1.1vw, 1.3rem);
@@ -180,64 +184,72 @@ main {
     outline: none;
 }
 
+.box-manage .input-group .view-code {
+    background-color: #222831;
+    border-radius: .3rem;
+}
+
+.box-manage .input-group .view-code code {
+    display: block;
+    padding: 0.6rem;
+    /* border: 1px solid #fff; */
+    /* margin: 0.2rem auto; */
+    /* width: 65%; */
+    /* text-align: center; */
+    /* border: 1px solid #fff; */
+    color: lightblue;
+    /* font-size: 0.9vw; */
+    font-size: clamp(0.8rem, 0.8vw, 1.3rem);
+    /* font-weight: 400; */
+    letter-spacing: 1px;
+    /* font-family: 'Poppins', sans-serif;*/
+}
+
+.box-manage .input-group .view-code code b {
+    color: #f2f2f2;
+    /* font-weight: ; */
+}
+
 .box-manage .button-group {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-button {
-    display: block;
-    /* background: #204051; */
-    background: #008891;
+.box-manage .input-group .view-code button {
+    background: #204051;
     color: #fff;
 
-    padding: 0.7rem;
-
+    width: 9.5rem;
     font-size: clamp(0.8rem, 1.1vw, 1.3rem);
     font-weight: 500;
     letter-spacing: 0.1rem;
     font-family: 'Roboto', sans-serif;
+
+    padding: 0.7rem;
+    margin: 1rem auto;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
     outline: none;
     transition: .3s;
-    margin-bottom: 0.5rem;
 }
 
-.box-manage button[type="submit"] {
-    width: 50%;
-    padding: 0.7rem;
-}
-
-.box-manage button {
-    width: 25%;
-    padding: 0.3rem;
-    font-size: clamp(0.8rem, 1vw, 1.3rem);
-    font-weight: 500;
-    /* letter-spacing: 0.1rem; */
-    font-family: 'Roboto', sans-serif;
-}
-
-.view-code button {
-    margin: 1rem auto;
-
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.view-code button i {
+.box-manage .input-group .view-code button i {
     color: lightblue;
     font-size: 1.5rem;
 }
 
-button:hover {
+.box-manage .input-group .view-code button:hover {
     filter: brightness(0.8);
 }
 
-button:active {
+.box-manage .input-group .view-code button:active {
     transform: scale(.9);
 }
 
