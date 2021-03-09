@@ -16,16 +16,16 @@ function sendValuesToCard(condition) {
     document.getElementById('bottomRight').innerHTML = `${getBorderBottomRightValue}%`
 
     switch (condition) {
-        case 'borderTopLeftRadius':
+        case 'borderTopLeftHorizontal':
             applyValuesInTheCard.borderTopLeftRadius = `${getBorderTopLeftValue}%`
             break;
-        case 'borderTopRightRadius':
+        case 'borderTopRightHorizontal':
             applyValuesInTheCard.borderTopRightRadius = `${getBorderTopRightValue}%`
             break;
-        case 'borderBottomLeftRadius':
+        case 'borderBottomLeftHorizontal':
             applyValuesInTheCard.borderBottomLeftRadius = `${getBorderBottomLeftValue}%`
             break;
-        case 'borderBottomRightRadius':
+        case 'borderBottomRightHorizontal':
             applyValuesInTheCard.borderBottomRightRadius = `${getBorderBottomRightValue}%`
             break;
         default:
