@@ -30,32 +30,43 @@ function sendValuesToCard(condition) {
             applyValuesInTheCard.borderBottomRightRadius = `${borderBottomRightValueHorizontal}%`
             break;
         case 'borderTopLeftVertical':
-            if(borderTopLeftValueHorizontal !== 0) {
-                applyValuesInTheCard.borderTopLeftRadius = `${borderTopLeftValueHorizontal}% ${borderTopLeftValueVertical}%`
+            if (borderTopLeftValueHorizontal != 0) {
+                applyValuesInTheCard.borderTopLeftRadius = `
+                    ${borderTopLeftValueHorizontal}% 
+                    ${borderTopLeftValueVertical}%`
             } else {
-                console.log("it dosen't work")
+                console.log("it dosen't work 1")
+            }
+            break;
+        case 'borderTopRightVertical':
+            if (borderTopRightValueHorizontal != 0) {
+                applyValuesInTheCard.borderTopRightRadius = `
+                    ${borderTopRightValueHorizontal}% 
+                    ${borderTopRightValueVertical}%`
+            } else {
+                console.log("it dosen't work 2")
+            }
+            break;
+        case 'borderBottomLeftVertical':
+            if (borderBottomLeftValueHorizontal != 0) {
+                applyValuesInTheCard.borderBottomLeftRadius = `
+                    ${borderBottomLeftValueHorizontal}% 
+                    ${borderBottomLeftValueVertical}%`
+            } else {
+                console.log("it dosen't work 3")
+            }
+            break;
+        case 'borderBottomRightVertical':
+            if (borderTopLeftValueHorizontal != 0) {
+                applyValuesInTheCard.borderBottomRightRadius = `
+                    ${borderBottomRightValueHorizontal}% 
+                    ${borderBottomRightValueVertical}%`
+            } else {
+                console.log("it dosen't work 4")
             }
             break;
         default:
             console.log("it dosen't work")
-    }
-}
-
-function viewCode() {
-    const viewCodeStyle = document.getElementById('viewCode').style
-    const buttonViewCode = document.getElementById('buttonViewCode')
-
-    switch (buttonViewCode.innerHTML) {
-        case "Ver Código":
-            viewCodeStyle.width = "50%"
-            buttonViewCode.innerHTML = "fechar Código"
-            break;
-        case "fechar Código":
-            viewCodeStyle.width = "0%"
-            buttonViewCode.innerHTML = "Ver Código"
-            break;
-        default:
-            console.log(buttonViewCode.innerHTML)
     }
 }
 
