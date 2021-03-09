@@ -4,14 +4,14 @@ function sendValuesToCard(condition) {
     const borderBottomLeftValueHorizontal = document.getElementById('borderBottomLeftHorizontal').value
     const borderBottomRightValueHorizontal = document.getElementById('borderBottomRightHorizontal').value
 
-    // const borderTopLeftValueVertical = document.getElementById('borderTopLeftVertical').value
-    // const borderTopRightValueVertical = document.getElementById('borderTopRightVertical').value
-    // const borderBottomLeftValueVertical = document.getElementById('borderBottomLeftVertical').value
-    // const borderBottomRightValueVertical = document.getElementById('borderBottomRightVertical').value
+    const borderTopLeftValueVertical = document.getElementById('borderTopLeftVertical').value
+    const borderTopRightValueVertical = document.getElementById('borderTopRightVertical').value
+    const borderBottomLeftValueVertical = document.getElementById('borderBottomLeftVertical').value
+    const borderBottomRightValueVertical = document.getElementById('borderBottomRightVertical').value
 
     const applyValuesInTheCard = document.getElementById('card').style
 
-    document.getElementById('topLeft').innerHTML = `${borderTopLeftValueHorizontal}%`
+    document.getElementById('topLeft').innerHTML = `${borderTopLeftValueHorizontal}% ${borderTopLeftValueVertical}%`
     document.getElementById('topRight').innerHTML = `${borderTopRightValueHorizontal}%`
     document.getElementById('bottomLeft').innerHTML = `${borderBottomLeftValueHorizontal}%`
     document.getElementById('bottomRight').innerHTML = `${borderBottomRightValueHorizontal}%`
@@ -28,6 +28,13 @@ function sendValuesToCard(condition) {
             break;
         case 'borderBottomRightHorizontal':
             applyValuesInTheCard.borderBottomRightRadius = `${borderBottomRightValueHorizontal}%`
+            break;
+        case 'borderTopLeftVertical':
+            if(borderTopLeftValueHorizontal !== 0) {
+                applyValuesInTheCard.borderTopLeftRadius = `${borderTopLeftValueHorizontal}% ${borderTopLeftValueVertical}%`
+            } else {
+                console.log("it dosen't work")
+            }
             break;
         default:
             console.log("it dosen't work")
