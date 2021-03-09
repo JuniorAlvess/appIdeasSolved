@@ -1,32 +1,33 @@
 function sendValuesToCard(condition) {
-    const getBorderTopLeftValue = document.getElementById('borderTop').value
-    const getBorderTopRightValue = document.getElementById('borderRight').value
-    const getBorderBottomLeftValue = document.getElementById('borderLeft').value
-    const getBorderBottomRightValue = document.getElementById('borderBottom').value
-    // const getBorderColorValue = document.getElementById('borderColor').value
-    // const getBackgroundColor = document.getElementById('backgroundColor').value
+    const borderTopLeftValueHorizontal = document.getElementById('borderTopLeftHorizontal').value
+    const borderTopRightValueHorizontal = document.getElementById('borderTopRightHorizontal').value
+    const borderBottomLeftValueHorizontal = document.getElementById('borderBottomLeftHorizontal').value
+    const borderBottomRightValueHorizontal = document.getElementById('borderBottomRightHorizontal').value
+
+    // const borderTopLeftValueVertical = document.getElementById('borderTopLeftVertical').value
+    // const borderTopRightValueVertical = document.getElementById('borderTopRightVertical').value
+    // const borderBottomLeftValueVertical = document.getElementById('borderBottomLeftVertical').value
+    // const borderBottomRightValueVertical = document.getElementById('borderBottomRightVertical').value
+
     const applyValuesInTheCard = document.getElementById('card').style
 
-    // insert values in viewCode
-    // document.getElementById('backColor').innerHTML = getBackgroundColor
-    // document.getElementById('bColor').innerHTML = getBorderColorValue
-    document.getElementById('topLeft').innerHTML = `${getBorderTopLeftValue}%`
-    document.getElementById('topRight').innerHTML = `${getBorderTopRightValue}%`
-    document.getElementById('bottomLeft').innerHTML = `${getBorderBottomLeftValue}%`
-    document.getElementById('bottomRight').innerHTML = `${getBorderBottomRightValue}%`
+    document.getElementById('topLeft').innerHTML = `${borderTopLeftValueHorizontal}%`
+    document.getElementById('topRight').innerHTML = `${borderTopRightValueHorizontal}%`
+    document.getElementById('bottomLeft').innerHTML = `${borderBottomLeftValueHorizontal}%`
+    document.getElementById('bottomRight').innerHTML = `${borderBottomRightValueHorizontal}%`
 
     switch (condition) {
         case 'borderTopLeftHorizontal':
-            applyValuesInTheCard.borderTopLeftRadius = `${getBorderTopLeftValue}%`
+            applyValuesInTheCard.borderTopLeftRadius = `${borderTopLeftValueHorizontal}%`
             break;
         case 'borderTopRightHorizontal':
-            applyValuesInTheCard.borderTopRightRadius = `${getBorderTopRightValue}%`
+            applyValuesInTheCard.borderTopRightRadius = `${borderTopRightValueHorizontal}%`
             break;
         case 'borderBottomLeftHorizontal':
-            applyValuesInTheCard.borderBottomLeftRadius = `${getBorderBottomLeftValue}%`
+            applyValuesInTheCard.borderBottomLeftRadius = `${borderBottomLeftValueHorizontal}%`
             break;
         case 'borderBottomRightHorizontal':
-            applyValuesInTheCard.borderBottomRightRadius = `${getBorderBottomRightValue}%`
+            applyValuesInTheCard.borderBottomRightRadius = `${borderBottomRightValueHorizontal}%`
             break;
         default:
             console.log("it dosen't work")
