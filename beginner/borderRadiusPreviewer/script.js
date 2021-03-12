@@ -12,9 +12,9 @@ function sendValuesToCard(condition) {
     const applyValuesInTheCard = document.getElementById('card').style
 
     document.getElementById('topLeft').innerHTML = `${borderTopLeftValueHorizontal}% ${borderTopLeftValueVertical}%`
-    document.getElementById('topRight').innerHTML = `${borderTopRightValueHorizontal}%`
-    document.getElementById('bottomLeft').innerHTML = `${borderBottomLeftValueHorizontal}%`
-    document.getElementById('bottomRight').innerHTML = `${borderBottomRightValueHorizontal}%`
+    document.getElementById('topRight').innerHTML = `${borderTopRightValueHorizontal}% ${borderTopRightValueVertical}`
+    document.getElementById('bottomLeft').innerHTML = `${borderBottomLeftValueHorizontal}% ${borderBottomLeftValueVertical}`
+    document.getElementById('bottomRight').innerHTML = `${borderBottomRightValueHorizontal}% ${borderBottomRightValueVertical}`
 
     switch (condition) {
         case 'borderTopLeftHorizontal':
